@@ -5,9 +5,13 @@ public class GoodStringCompare
 
    public static void main(String[] args)
    {
+      // Compare three strings
+      // Using the correct .equals() method
 
+      // Instantiate variables
       String name1, name2, name3;
       
+      // Get a scanner object
       Scanner keyboard = new Scanner(System.in);
       
       // Get a name
