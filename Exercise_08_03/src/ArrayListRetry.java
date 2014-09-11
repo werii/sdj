@@ -48,7 +48,5 @@ public class ArrayListRetry
       {
          System.out.println("Value " + (i+1) + " squared is: " + Math.pow(intArray.get(i), 2));
       }
-
    }
-
 }
