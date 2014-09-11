@@ -29,16 +29,13 @@ public class PrintDifferences
       }
       
       // Loop over array and find differences
-      for (int j = 0; j < collection.length; j++)
+      for (int i = 0; i < collection.length; i++)
       {
-         if (j > 0)
+         if (i > 0)
          {
-            diff = collection[j] - collection[j-1];
-            System.out.println("Difference between value " + j + " and value " + (j+1) + " is: " + diff);
+            diff = collection[i] - collection[i-1];
+            System.out.println("Difference between value " + i + " and value " + (i+1) + " is: " + diff);
          }
       }
-      
-
    }
-
 }
