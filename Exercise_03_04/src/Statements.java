@@ -1,9 +1,12 @@
-
 public class Statements
 {
 
    public static void main(String[] args)
    {
+      // Random problems in the book
+      // Playing with if statements
+      // Kind of hard to comment/follow :\
+      
       int x, y, z, hours;
       double payRate;
       char myCharacter;

@@ -5,13 +5,22 @@ public class RomanNumerals
 
    public static void main(String[] args)
    {
+      // Get a number from user, from 1-10
+      // Convert number to roman numerals
+      // Use a switch statement
+
+      // Get a scanner object
       Scanner keyboard = new Scanner(System.in);
+      
+      // Instantiate variables
       int number;
       String numeral; 
 
+      // Get number from user
       System.out.println("Enter a number from 1-10");
       number = keyboard.nextInt();
       
+      // Start switch statement
       switch (number)
       {
          case 1:
@@ -45,13 +54,16 @@ public class RomanNumerals
             numeral = "X";
             break;
          default:
-            numeral = "";
+            numeral = ""; // Basically, sets to a null value
       }
 
-      if (numeral != "")
+      // If numeral was between 1-10, print result
+      // Use String method for equals instead of ==
+      if (!numeral.equals(""))
         System.out.println("Corresponding numeral to " + number + " is: " + numeral); 
       else
       {
+         // Otherwise, print an error
          System.out.println("Error! Not between 1-10");
       }
    }

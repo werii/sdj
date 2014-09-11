@@ -2,11 +2,15 @@ import java.util.Scanner;
 
 public class TimeCalculator
 {
-
    public static void main(String[] args)
    {
+      // Get a seconds value from user
+      // Convert it to other time measurements
+      
+      // Get a scanner object
       Scanner keyboard = new Scanner(System.in);
       
+      // Instantiate variables
       double seconds, minutes, hours, days;
       
       // Find number of seconds

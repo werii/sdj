@@ -38,5 +38,4 @@ public class Division
       // (I'm just playing around with this, this does nothing here because the program is ending anyways)
       keyboard.close();
    }
-
 }

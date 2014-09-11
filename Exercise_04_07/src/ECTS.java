@@ -10,16 +10,22 @@ import java.util.Scanner;
 
 public class ECTS
 {
-
    public static void main(String[] args)
    {
+      // Convert a grade from 12-scale to ECTS
+      
+      // Instantiate variables
       int grade;
       String ects;
+      
+      // Get a scanner object
       Scanner keyboard = new Scanner(System.in);
       
+      // Get value from the user
       System.out.println("Enter a grade from the 7-grade scale");
       grade = keyboard.nextInt();
       
+      // Use switch statement to match values
       switch (grade)
       {
          case 12:
@@ -44,9 +50,11 @@ public class ECTS
             ects = "F";
             break;
          default:
-            ects = "";
+            ects = ""; // Default to a null value
             break;
       }
+      
+      // If value was set, return result
       if (!ects.equals(""))
       {
          System.out.println("7-grade value: " + grade);
@@ -54,6 +62,7 @@ public class ECTS
       }
       else
       {
+         // Otherwise, return an error
          System.out.println("Grade: " + grade + " is off of the 7-grade scale.");
       }
    }

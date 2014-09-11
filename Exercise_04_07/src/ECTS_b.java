@@ -5,13 +5,20 @@ public class ECTS_b
 
    public static void main(String[] args)
    {
+      // Convert an ECTS grade to a 12-scale grade
+      
+      // Instantiate variables
       String ects;
-      Integer grade = null;
+      Integer grade = null; // Using an Integer wrapper, to set a null value
+      
+      // Get scanner object
       Scanner keyboard = new Scanner(System.in);
       
+      // Get value from user
       System.out.println("Enter an ECTS grade");
       ects = keyboard.nextLine().toUpperCase();
       
+      // Perform switch statement to match values
       switch (ects)
       {
          case "A":
@@ -36,6 +43,7 @@ public class ECTS_b
             grade = -3;
             break;
       }
+      // If grade was set (isn't still null), return result
       if (grade != null)
       {
          System.out.println("ECTS value: " + ects);
@@ -43,6 +51,7 @@ public class ECTS_b
       }
       else
       {
+         // If it wasn't set (still is null), return an error
          System.out.println("Grade: " + ects + " is off of the ECTS scale.");
       }
    }

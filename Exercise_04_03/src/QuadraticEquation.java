@@ -5,17 +5,26 @@ public class QuadraticEquation
 
    public static void main(String[] args)
    {
+      // Get three numbers from the user
+      // And perform the quadratic equation with them
+      // (what is the quadratic equation used for again???)
+
+      // Instantiate variables
       double a, b, c, d, solution, solution2;
+
+      // Get a scanner object
       Scanner keyboard = new Scanner(System.in);
-      
+
+      // Get values from user
       System.out.println("A:");
       a = keyboard.nextDouble();
       System.out.println("B:");
       b = keyboard.nextDouble();
       System.out.println("C:");
       c = keyboard.nextDouble();
-      
-     // D = b^2 - 4ac 
+
+      // Find the value of D
+      // D = b^2 - 4ac 
       d = ((Math.pow(b, 2)) - (4 * a * c));
 
       // If D < 0, no solutions
@@ -23,6 +32,7 @@ public class QuadraticEquation
       {
          System.out.println("D is: " + d + ", no solutions");
       }
+
       // If D = 0, solution is -(b/2a)
       else if (d == 0)
       {
