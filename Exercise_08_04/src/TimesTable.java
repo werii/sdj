@@ -48,7 +48,6 @@ public class TimesTable
             else if (timesTable[i][j] < 10000)   
                System.out.printf("%d", timesTable[i][j]);
             // And then I won't care about larger values
-
          }
          // Print each row on a new line
          System.out.println();
