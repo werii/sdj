@@ -1,0 +1,26 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class AssertTests
+{
+
+   @Test
+   public void usernameIsRevealed()
+   {
+      fail("Not yet implemented");
+   }
+   
+   @Test
+   public void passwordAndConfirmationMatch()
+   {
+      
+   }
+   
+   @Test
+   public void passwordIsRevealed()
+   {
+   }
+
+}

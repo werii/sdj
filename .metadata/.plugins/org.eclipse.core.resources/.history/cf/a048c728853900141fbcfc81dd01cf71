@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+
+public class ComputeDistances
+{
+
+   public static void main(String[] args)
+   {
+      // Read point coordinates from a keyboard
+      // Print out all coordinates
+      // And compute distances between the successive coordinates
+      // Distances between x1,y1 and x2,y2 is sqrt((y2-y1)^2 + (x2-x1)^2)
+      
+      Scanner key = new Scanner(System.in);
+      int[] xCoordinates, yCoordinates;
+      final int ARRAYLENGTH;
+      double distance;
+      
+      // Find length and instantiate arrays
+      System.out.println("How many coordinates will you please?");
+      ARRAYLENGTH = key.nextInt();
+      xCoordinates = new int[ARRAYLENGTH];
+      yCoordinates = new int[ARRAYLENGTH];
+      
+      // Build arrays
+      for (int i = 0; i < xCoordinates.length; i++)
+      {
+         System.out.println("Input x coordinate number " + (i+1));
+         xCoordinates[i] = key.nextInt();
+         System.out.println("Input y coordinate number " + (i+1));
+         yCoordinates[i] = key.nextInt();
+      }
+      
+      // Print arrays
+      for (int j = 0; j < xCoordinates.length; j++)
+      {
+         System.out.println("Coordinate pair " + (j+1) + " is: ");
+         System.out.printf("(%d, %d)\n", xCoordinates[j], yCoordinates[j]);
+      }
+      
+      // Perform maths
+      // Distances between x1,y1 and x2,y2 is sqrt((y2-y1)^2 + (x2-x1)^2)
+     for (int k = 0; k < xCoordinates.length-1; k++)
+     {
+        // Find distance between coordinate sets
+        distance = Math.sqrt(Math.pow(yCoordinates[k+1] - yCoordinates[k], 2) + Math.pow(xCoordinates[k+1] - xCoordinates[k], 2));
+        System.out.println("Distance between points: ");
+        System.out.printf("(%d, %d) and (%d, %d)", xCoordinates[k], yCoordinates[k], xCoordinates[k+1], yCoordinates[k+1]);
+        System.out.println("is: " + distance);
+     }
+
+   }
+
+}

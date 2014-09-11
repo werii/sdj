@@ -1,0 +1,30 @@
+import lejos.nxt.MotorPort;
+
+
+public class RunEngine
+{
+
+   public static void main(String[] args) throws InterruptedException
+   {
+      int counter = 4;
+      
+      // Forward
+      MotorPort.A.controlMotor(100, 1);
+      MotorPort.B.controlMotor(100, 1);
+      Thread.sleep(2000);
+      
+      while (counter > 0) {
+         MotorPort.A.controlMotor(100, 3);
+         Thread.sleep(500);
+         MotorPort.A.controlMotor(100, 1);
+         Thread.sleep(2000);
+         counter--;
+      }
+ 
+      // Forward
+      MotorPort.C.controlMotor(100, 1);
+      MotorPort.A.controlMotor(100, 1);
+      Thread.sleep(1000);
+   }
+
+}

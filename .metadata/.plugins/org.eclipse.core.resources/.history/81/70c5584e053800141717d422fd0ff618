@@ -1,0 +1,15 @@
+import lejos.nxt.MotorPort;
+
+
+public class LightSensor
+{
+
+   public static void main(String[] args)
+   {
+      MotorPort.A.controlMotor(100, 1);
+      MotorPort.B.controlMotor(96, 1);
+      // TODO Auto-generated method stub
+
+   }
+
+}

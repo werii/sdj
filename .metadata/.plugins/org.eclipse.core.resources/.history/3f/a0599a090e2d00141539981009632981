@@ -1,0 +1,14 @@
+import lejos.nxt.MotorPort;
+
+
+public class RunEngine
+{
+
+   public static void main(String[] args)
+   {
+      // TODO Auto-generated method stub
+      MotorPort.A.controlMotor(100, 1);
+      
+   }
+
+}

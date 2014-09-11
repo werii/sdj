@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+
+public class To_n_doubled
+{
+
+   public static void main(String[] args)
+   {
+      int i=0, n;
+      Scanner key = new Scanner(System.in);
+   }
+
+}

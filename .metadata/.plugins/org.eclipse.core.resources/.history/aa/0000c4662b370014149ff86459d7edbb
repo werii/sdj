@@ -1,0 +1,29 @@
+
+public class Accumulations
+{
+
+   public static void main(String[] args)
+   {
+      // Create an array of doubles and print out the:
+      // 1. Sum of the numbers
+      // 2. Average of the numbers
+      // 3. Maximum of the numbers
+      // 4. Product of the numbers
+      
+      // Initialize array
+      double[] collection = {1.1, 2.2, 3.3, 4.4};
+      double sum = 0, average, maximum = 0, product;
+      for (double count = 0; count < collection.length; count++)
+      {
+         sum += collection[count];
+         if (collection[count] >= maximum])
+            maximum = collection[count];
+         
+         
+         
+         
+      }
+      average = sum / collection.length;
+   }
+
+}

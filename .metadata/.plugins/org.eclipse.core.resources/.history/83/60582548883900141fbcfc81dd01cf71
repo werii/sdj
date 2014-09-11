@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class TicTacToe
+{
+
+   public static void main(String[] args)
+   {
+      char[][] board = new char[3][3];
+      
+      System.out.printf(" %c | %c | %c %n", ' ', ' ', ' ');
+      System.out.println("-----------");
+      System.out.printf(" %c | %c | %c %n", ' ', ' ', ' ');
+      System.out.println("-----------");
+      System.out.printf(" %c | %c | %c %n", ' ', ' ', ' ');
+
+   }
+
+}

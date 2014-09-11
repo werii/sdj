@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class PenniesForPay
+{
+
+   public static void main(String[] args)
+   {
+      Scanner key = new Scanner(System.in);
+      double salary;
+      int days;
+      
+      System.out.println("How many days?");
+      days = key.nextInt();
+      
+      for (int i = 0; i <= days; i++)
+      {
+         
+      }
+
+   }
+
+}

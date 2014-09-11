@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class ArrayComparer
+{
+
+   public static void main(String[] args)
+   {
+      Scanner key = new Scanner(System.in);
+      
+      // Take two arrays and compare them for equality
+      // Compare value by value
+      
+      int[] array1, array2;
+      
+      // Get and set array lengths
+      System.out.println("How many elements will you need?");
+      final int LENGTH = key.nextInt();
+      array1 = new int[LENGTH];
+      array2 = new int[LENGTH];
+      
+      
+
+   }
+
+}

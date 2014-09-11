@@ -1,0 +1,27 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class AssertTests
+{
+
+   @Test
+   public void usernameIsRevealed()
+   {
+      fail("Not yet implemented");
+   }
+   
+   @Test
+   public void passwordAndConfirmationMatch()
+   {
+      org.junit.Assert.assertEquals("Password and Confirmation are not the same", password, passwordConfirmation);
+      
+   }
+   
+   @Test
+   public void passwordIsRevealed()
+   {
+   }
+
+}

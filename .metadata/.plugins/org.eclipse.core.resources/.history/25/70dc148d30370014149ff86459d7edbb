@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+
+public class ArrayCopier
+{
+
+   public static void main(String[] args)
+   {
+      // Take an array of integers and copy it to a new array
+      Scanner key = new Scanner(System.in);
+
+      int[] collection;
+      
+      // Get and set array length
+      System.out.println("How many elements will you need?");
+      final int LENGTH = key.nextInt();
+      collection = new int[LENGTH];
+      
+      
+
+   }
+
+}

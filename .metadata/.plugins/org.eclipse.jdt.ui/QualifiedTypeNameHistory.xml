@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="lejos.nxt.LCD"/>
+<fullyQualifiedTypeName name="javax.swing.text.NumberFormatter"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="lejos.nxt.TouchSensor"/>
+<fullyQualifiedTypeName name="lejos.nxt.LightSensor"/>
+<fullyQualifiedTypeName name="lejos.nxt.SensorPort"/>
+<fullyQualifiedTypeName name="lejos.robotics.navigation.DifferentialPilot"/>
+<fullyQualifiedTypeName name="lejos.nxt.Motor"/>
+<fullyQualifiedTypeName name="lejos.robotics.LightScanner"/>
+<fullyQualifiedTypeName name="lejos.nxt.MotorPort"/>
+</qualifiedTypeNameHistroy>

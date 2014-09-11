@@ -1,0 +1,20 @@
+import lejos.nxt.LightSensor;
+import lejos.nxt.MotorPort;
+import lejos.nxt.SensorPort;
+
+
+public class FollowTheLine
+{
+
+   public static void main(String[] args)
+   {
+      // Follow a black line using the light sensor
+      MotorPort.A.controlMotor(100, 1);
+      MotorPort.B.controlMotor(96, 1);
+
+      LightSensor light = new LightSensor(SensorPort.S1);
+      boolean stop = false;
+      
+   }
+
+}

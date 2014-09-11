@@ -1,0 +1,28 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class NumberGuesser
+{
+
+   public static void main(String[] args)
+   {
+      Random random = new Random(); 
+      Scanner key = new Scanner(System.in);
+
+      int target = random.nextInt(1000) + 1;
+      int guess = -1;
+      
+      while (guess != target)
+      {
+         System.out.println("Make a new guess!");
+         guess = key.nextInt();
+         
+         if (guess > target)
+            System.out.println("Too high!");
+         if (guess < target)
+            System.out.println("Too low!");
+         
+      } 
+      System.out.println("You got it! The value was: " + target);
+   }
+}
