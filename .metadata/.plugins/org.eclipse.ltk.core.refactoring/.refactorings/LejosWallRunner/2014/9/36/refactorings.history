@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;Wall&apos; to &apos;Meter&apos;&#x0D;&#x0A;- Original project: &apos;LejosWallRunner&apos;&#x0D;&#x0A;- Original element: &apos;Wall&apos;&#x0D;&#x0A;- Renamed element: &apos;Meter&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Wall&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{Wall.java[Wall" matchStrategy="1" name="Meter" qualified="false" references="true" similarDeclarations="false" stamp="1409657112321" textual="false" version="1.0"/>
-</session>

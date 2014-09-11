@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move 3 elements to &apos;LeJOS Hello/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;LejosWallRunner&apos;&#x0D;&#x0A;- Destination element: &apos;LeJOS Hello/src/(default package)&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Circle.java&#x0D;&#x0A;     Meter.java&#x0D;&#x0A;     HitWall.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="=LeJOS Hello/src&lt;" element1="/src&lt;{Circle.java" element2="/src&lt;{Meter.java" element3="/src&lt;{HitWall.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1410246848582" units="3" version="1.0"/>
-</session>
