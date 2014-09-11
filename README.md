@@ -1,0 +1,1 @@
+This is a repository of exercises/homework/whatever done in the SDJ course.
