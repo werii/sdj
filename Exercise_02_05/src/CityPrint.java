@@ -7,7 +7,7 @@ public class CityPrint
    {
       // Using String methods
       
-      // Instantiate variables
+      // Declare variables
       String city, upperName, lowerName;
       int cityLength;
       char firstChar;

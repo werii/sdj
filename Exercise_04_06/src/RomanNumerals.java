@@ -12,7 +12,7 @@ public class RomanNumerals
       // Get a scanner object
       Scanner keyboard = new Scanner(System.in);
       
-      // Instantiate variables
+      // Declare variables
       int number;
       String numeral; 
 

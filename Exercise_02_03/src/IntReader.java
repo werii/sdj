@@ -8,7 +8,7 @@ public class IntReader
       // Get values from the user
       // Print the sum and product of the values
       
-      // Instantiate variables
+      // Declare variables
       int a,b,c;
       
       // Get a scanner object

@@ -10,7 +10,7 @@ public class TimeCalculator
       // Get a scanner object
       Scanner keyboard = new Scanner(System.in);
       
-      // Instantiate variables
+      // Declare variables
       double seconds, minutes, hours, days;
       
       // Find number of seconds

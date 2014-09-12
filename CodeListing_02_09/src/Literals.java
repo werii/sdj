@@ -3,7 +3,7 @@ public class Literals
 
    public static void main(String[] args)
    {
-      // initialize an int variable 
+      // Declare an int variable 
       int apples;
 
       // give it a value of 20

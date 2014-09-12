@@ -6,7 +6,7 @@ public class Tax
    {
       // Find tax on three items
       
-      // Instantiate and set variables
+      // Declare and initialize variables
       int item1 = 80, 
           item2 = 140,
           item3 = 230;

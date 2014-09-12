@@ -11,7 +11,7 @@ public class AgeJudger
       // Get scanner object
       Scanner keyboard = new Scanner(System.in);
       
-      // Instantiate age variable
+      // Declare age variable
       int age;
 
       // Get age value from user

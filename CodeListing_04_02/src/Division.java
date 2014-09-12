@@ -11,7 +11,7 @@ public class Division
       // Make a scanner object
       Scanner keyboard = new Scanner(System.in);
       
-      // Instantiate variables
+      // Declare variables
       int number1, number2;
       double quotient;
       

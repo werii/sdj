@@ -7,7 +7,7 @@ public class Sale
       // Set the price, tax, and total of an item
       // Then print the values
       
-      // Instantiate variables
+      // Declare variables
       double price, tax, total;
       
       // Give them values

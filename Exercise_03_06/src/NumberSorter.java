@@ -12,7 +12,7 @@ public class NumberSorter
       // Note: this is much, much easier with collections
       // and a proper algorithm
 
-      // Instantiate variables
+      // Declare variables
       double a, b, c;
 
       // Get a scanner object

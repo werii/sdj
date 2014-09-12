@@ -9,7 +9,7 @@ public class QuadraticEquation
       // And perform the quadratic equation with them
       // (what is the quadratic equation used for again???)
 
-      // Instantiate variables
+      // Declare variables
       double a, b, c, d, solution, solution2;
 
       // Get a scanner object

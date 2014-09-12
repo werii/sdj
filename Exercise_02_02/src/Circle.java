@@ -6,7 +6,7 @@ public class Circle
    {
       // Find the area of a circle
       
-      // Instantiate variables
+      // Declare variables
       double radius, area;
       
       // Set the radius

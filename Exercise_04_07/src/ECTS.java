@@ -14,7 +14,7 @@ public class ECTS
    {
       // Convert a grade from 12-scale to ECTS
       
-      // Instantiate variables
+      // Declare variables
       int grade;
       String ects;
       

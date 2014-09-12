@@ -8,7 +8,7 @@ public class Stocks
       // See gains and loses made on stock purchases
       // Use user input
       
-      // Instantiate variables
+      // Declare variables
       int shares;
       double sharePrice, purchaseCommission, sellCommission, purchaseAmount, sellAmount;
       

@@ -11,7 +11,7 @@ public class NumPrinter
       // 2. Find quotient
       // 3. Find the remainder
       
-      // Instantiate variables
+      // Declare variables
       int a,b, high, low;
       
       // Get a scanner object

@@ -6,7 +6,7 @@ public class PrintOut
    {
       // Print three variables
       
-      // Instantiate variables
+      // Declare variables
       int apples;
       double price, total;
       

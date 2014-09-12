@@ -6,7 +6,7 @@ public class UpperCaseStringLength
    {
       // Play with String methods
       
-      // Instantiate and set a String object
+      // Declare and initialize a String object
       String name = "Kris";
       
       // Get the length of the string

@@ -7,7 +7,7 @@ public class ECTS_b
    {
       // Convert an ECTS grade to a 12-scale grade
       
-      // Instantiate variables
+      // Declare variables
       String ects;
       Integer grade = null; // Using an Integer wrapper, to set a null value
       

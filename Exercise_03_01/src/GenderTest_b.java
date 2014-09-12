@@ -8,7 +8,7 @@ public class GenderTest_b
       // Return whether user is a man, boy, woman, or girl
       // Using nested if/else statements
       
-      // Instantiate age variable
+      // Declare age variable
       int age;
       
       // Get a scanner object

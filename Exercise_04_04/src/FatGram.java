@@ -9,7 +9,7 @@ public class FatGram
       // Get a scanner object
       Scanner keyboard = new Scanner(System.in);
       
-      // Instantiate variables
+      // Declare variables
       double calories, fatGrams, caloriesFromFat, percentCaloriesFromFat;
       
       // Get calories and fat grams from user

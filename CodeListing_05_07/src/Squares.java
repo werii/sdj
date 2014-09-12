@@ -12,7 +12,7 @@ public class Squares
       // List every number up to the given number
       // And show the square of that number
       
-      // Instantiate the count variable
+      // Declare the count variable
       int count;
       
       // Get a scanner object

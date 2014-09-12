@@ -4,7 +4,7 @@ public class StringLength
 
    public static void main(String[] args)
    {
-      // Instantiate a String object
+      // Declare a String object
       String name = "Herman";
       
       // Use a string method to set the value of stringSize

@@ -8,7 +8,7 @@ public class GoodStringCompare
       // Compare three strings
       // Using the correct .equals() method
 
-      // Instantiate variables
+      // Declare variables
       String name1, name2, name3;
       
       // Get a scanner object
