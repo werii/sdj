@@ -38,11 +38,7 @@ public class RectangleAreas
       // Loop to print area values
       for (int i = 0; i < ARRAYLENGTH; i++)
       {
-<<<<<<< HEAD
          System.out.printf("Area of rectangle %d is: %.2f %n", (i+1), (width[i] * height[i]));
-=======
-         System.out.printf("Area of rectangle %d is: %f %n", (i+1), (width[i] * height[i]));
->>>>>>> 6c19bdb7ec2c810853334f4f1f3a4708e75061b4
       }
    }
 
