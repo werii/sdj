@@ -1,7 +1,5 @@
-
 public class LengthWidthDemo
 {
-
    public static void main(String[] args)
    {
       Rectangle box = new Rectangle();
@@ -13,5 +11,4 @@ public class LengthWidthDemo
       System.out.println("The width of the box is: " + box.getWidth());
 
    }
-
 }
