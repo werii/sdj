@@ -7,11 +7,15 @@ public class HitWall
 
    public static void main(String[] args) throws InterruptedException
    {
+      // Make the robot stop when it hits something
+      
+      // Declare and initialize hit boolean variable
       boolean hit = false;
       
       // Initialize touch sensor on port 3
       TouchSensor touch = new TouchSensor(SensorPort.S3);
 
+      // As long as hit is still false, loop
       while(hit == false)
       {
          // Start motors
@@ -24,6 +28,7 @@ public class HitWall
             hit = true;
          }
          
+         // Don't loop too fast
          Thread.sleep(100);
       }
    }

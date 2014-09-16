@@ -8,6 +8,7 @@ public class FollowTheLine
 
    public static void main(String[] args) throws InterruptedException
    {
+      // UNFINISHED!!!
       // Follow a black line using the light sensor
       // Ideas: 
       // Continue forward only when line is found

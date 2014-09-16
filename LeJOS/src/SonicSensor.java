@@ -9,6 +9,7 @@ public class SonicSensor
 
    public static void main(String[] args) throws InterruptedException
    {
+      // USES A PILOT - NEEDS REWRITING!!!
       // 1) Make robot stop 50cm in front of an obstacle or if touch sensor is press
       // 2) Make robot turn left if it stopped from light sensor
       // and turn right if stopped from touch sensor
