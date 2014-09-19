@@ -11,7 +11,15 @@ public class MyDateTest
 
       System.out.println("Leap year in: " + date.getYear() + "?: " + date.leapYear());
       System.out.println("Days in month: " + date.getLengthOfMonth());
-
+      
+      System.out.println("Date:");
+      date.displayDate();
+      date.goToNextDay();
+      System.out.println("Date:");
+      date.displayDate();
+      date.advanceDays(10);
+      System.out.println("Date:");
+      date.displayDate();
    }
 
 }
