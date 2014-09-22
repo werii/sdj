@@ -102,7 +102,7 @@ public class MyDate
       if (month == 2)
       {
          // Use the leapYear method
-         if (this.leapYear() == true)
+         if (this.leapYear())
          {
             return 29;
          }
