@@ -28,4 +28,23 @@ public class Person
    {
       return this.name;
    }
+   
+   // Return a String representation
+   public String toString()
+   {
+      return this.name + ", " + this.birthday;
+   }
+   
+   // Return a copy of the current object
+   public Person copy()
+   {
+      return new Person(this.name, this.birthday);
+   }
+   
+   // Compare with another Person object
+   public boolean equals(Person other)
+   {
+      return this.name == other.name &&
+             this.birthday == other.birthday; 
+   }
 }
