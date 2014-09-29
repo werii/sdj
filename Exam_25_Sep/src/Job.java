@@ -45,6 +45,9 @@ public class Job
    
    public boolean isAvailable()
    {
+      // So, I did this in an amateurish way
+      // The elegant solution is:
+      // return this.employee == null;
       if (this.employee == null)
       {
          return true;
