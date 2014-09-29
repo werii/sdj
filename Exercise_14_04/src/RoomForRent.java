@@ -5,7 +5,6 @@ public class RoomForRent
    private String address;
    private double price;
    private Rectangle size;
-   private Person tenant;
    
    // Constructors
    // Using another object is just like using a String
@@ -14,15 +13,6 @@ public class RoomForRent
       this.address = address;
       this.price = price;
       this.size = size;
-      this.tenant = null;
-   }
-   // Four argument constructor
-   public RoomForRent(String address, double price, Rectangle size, Person tenant)
-   {
-      this.address = address;
-      this.price = price;
-      this.size = size;
-      this.tenant = tenant;
    }
    
    // Getter methods
@@ -55,8 +45,7 @@ public class RoomForRent
    {
       return this.address.equals(other.address) &&
              this.price == other.price &&
-             this.size.equals(other.size) &&
-             this.tenant.equals(other.tenant);
+             this.size.equals(other.size);
    }
    
    // Return a String representation
@@ -64,28 +53,6 @@ public class RoomForRent
    {
       return "Address: " + this.address +
              ", price: " + this.price +
-             ", size: " + this.size.getString() +
-             ", tenant: " + this.tenant.getName();
-   }
-   
-   // Set a new tenant if there isn't one already
-   public void rent(Person newTenant)
-   {
-      if (this.tenant != null)
-      {
-         this.tenant = newTenant;
-      }
-   }
-   
-   // Boot a tenant (set value to null)
-   public void evict()
-   {
-      this.tenant = null;
-   }
-   
-   // Show if room is rented (true) or not (false)
-   public boolean isRented()
-   {
-      return this.tenant != null;
+             ", size: " + this.size.getArea();
    }
 }

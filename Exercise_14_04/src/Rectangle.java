@@ -48,13 +48,13 @@ public class Rectangle
    {
       return this.height * this.width;
    }
-
+   
    // Return contents as a String
    public String getString()
    {
       return this.getHeight() + "x" + this.getWidth();
    }
-
+   
    // Copy into a new object
    public Rectangle copy()
    {
