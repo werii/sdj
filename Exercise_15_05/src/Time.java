@@ -110,12 +110,12 @@ public class Time
          {
             this.minutes = 0;
 
-            // If minutes is also 23, set that to 0
+            // If hours is also 23, set that to 0
             if (this.hours == 23)
             {
                this.hours = 0;
             }
-            // Otherwise just add one to hours
+            // Otherwise just increment it by 1
             else
             {
                this.hours += 1;

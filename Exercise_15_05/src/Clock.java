@@ -1,4 +1,3 @@
-
 public class Clock
 {
    // Declare variables
@@ -23,7 +22,7 @@ public class Clock
    public String toString()
    {
       // Use the toString method on the time object
-      return this.time.toString();
+     return this.time.toString();
    }
    
    // Return a copy clock object
@@ -39,6 +38,5 @@ public class Clock
       // Use the advance seconds method on the time object
       this.time.advanceSeconds();
    }
-   
 
 }
