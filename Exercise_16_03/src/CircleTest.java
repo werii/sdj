@@ -16,9 +16,6 @@ public class CircleTest
       // Move the center to new coordinate
       smallCircle.moveTo(200, -50);
       
-      // They share the same center object
-      // fix is to instantiate objects with
-      // new Circle(center.copy(), 50);
       System.out.println(smallCircle);
       System.out.println(bigCircle);
 

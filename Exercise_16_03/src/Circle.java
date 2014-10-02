@@ -9,7 +9,8 @@ public class Circle
    public Circle(Point center, double radius)
    {
       this.radius = radius;
-      this.center = center;
+      // Give a new center instance to each new circle object
+      this.center = center.copy();
    }
    
    // Getters
