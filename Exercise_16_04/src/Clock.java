@@ -15,6 +15,7 @@ public class Clock
    public Time getTime()
    {
       // Use the copy method on the time object
+      // This keeps the original time object local to the clock
       return this.time.copy();
    }
    
