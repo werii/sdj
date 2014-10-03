@@ -87,4 +87,67 @@ public class BitVector
       // Outside of loop, return finished string
       return arrayAsString;
    }
+   
+   // Check if current BitVector object is the same as another object
+   // Warning: gets complicated
+   public boolean equals(Object obj)
+   {
+      // If obj is a BitVector
+      if(obj instanceof BitVector)
+      {
+         // WARNING: complicated! Need to cast the obj as a BitVector before using its length property
+         // If the two BitVector objects have the same length
+         if(this.bits.length == ((BitVector) obj).bits.length)
+         {
+            // Loop through the arrays
+            for(int i = 0; i < bits.length; i++)
+            {
+               // If the current index value is not the same in both
+               if(bits[i] != ((BitVector) obj).bits[i])
+               {
+                  // Return false
+                  return false;
+               }
+            }
+            // If loop didn't return false, return true
+            return true;
+         }
+      }
+      // If not a BitVector or not the same length, return false
+      return false;
+   }
+   
+   // Compare against another BitVector object
+   // If elements in same index are the same in both arrays,
+   // make that index true, and false if otherwise
+   public BitVector and(BitVector other)
+   {
+      // Make a new bitsComparison object
+      BitVector bitsComparison = new BitVector(bits.length);
+      
+      // SHOULD THROW EXCEPTION IF BOTH AREN'T SAME LENGTH
+      // BUT I DON'T KNOW HOW TO DO THAT....
+
+      // Loop through the arrays
+      for(int i = 0; i < bits.length; i++)
+      {
+         // If values in both arrays are the same
+         if(bits[i] == other.bits[i])
+         {
+            // Set comparison bits array value to true
+            bitsComparison.bits[i] = true;
+         }
+         // If values in both arrays are not the same
+         else
+         {
+            // Set comparison bits array value to false
+            bitsComparison.bits[i] = false;
+         }
+      }
+
+      // Return the finished comparison object
+      return bitsComparison;
+   }
+   
+   
 }
