@@ -78,8 +78,14 @@ public class Controller
    public void move() throws InterruptedException
    {
       // Drive according to data!
-      LCD.clearDisplay();
-      LCD.drawString("HEYO!!!", 1, 1);
-      Thread.sleep(50000);
+      for (int i = 0; i < dataSet.size(); i++)
+      {
+         int speed = dataSet.get(i).getSpeed();
+         int distance = dataSet.get(i).getDistance();
+         int angle = dataSet.get(i).getAngle();
+         view.drawGUI();
+         view.drawNumber(i+1);
+         robot.forward(distance, speed);
+      }
    }
 }

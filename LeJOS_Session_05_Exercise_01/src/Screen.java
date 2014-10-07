@@ -24,7 +24,7 @@ public class Screen
       LCD.drawString(q, 0, 0);
    }
 
-   // pick a number
+   // Draw a number
    public void drawNumber(int num)
    {
       // Clears the current line first
@@ -57,7 +57,7 @@ public class Screen
             enterPressed = true;
          }
 
-         // If input is left, decrement number
+         // If input is left, decrement number by 10
          if (b == Button.ID_LEFT)
          {
             // Don't let number be less than lowest allowed
@@ -68,7 +68,7 @@ public class Screen
             number -= 10;
          }
 
-         // If input is right, increment number
+         // If input is right, increment number by 10
          if (b == Button.ID_RIGHT)
          {
             // Don't let number be more than highest allowed
@@ -85,33 +85,26 @@ public class Screen
       return number;
       
    }
-   // Displays the final result
-   public void displayResult(String result) throws InterruptedException
-   {
-      // Clear display first
-      LCD.clearDisplay();
-      
-      // Draw a header
-      LCD.drawString("Result is: ", 0, 0);
-      
-      // Draw the result
-      LCD.drawString(result, 2, 2);
-      
-      // Keep on the screen for a few seconds
-      Thread.sleep(10000);
-   }
-   
+
+   // Ask for user confirmation
+   // Uses enter and escape keys
+   // Returns either true or false
    public boolean confirm()
    {
+      // Record user input
       int buttonPressed = Button.waitForAnyPress();
+      
+      // If enter, return true
       if ( buttonPressed == Button.ID_ENTER )
       {
          return true;
       }
+      // If escape, return false
       else if (buttonPressed == Button.ID_ESCAPE)
       {
          return false;
       }
+      // If neither enter nor escape, run method again (recursion)
       else 
       {
         return confirm(); 
