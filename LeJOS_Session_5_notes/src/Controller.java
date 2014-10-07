@@ -1,47 +1,85 @@
 import java.util.ArrayList;
 
+import lejos.nxt.*;
 
+//  1. Prepare a series of datasets
+//  2. Each dataset contains three values (speed, distance, angle)
+//  3. Enter datasets until user is finished ("Route Finished")
+//  4. Wait for start signal from user
+//  5. Execute the inputted route
 public class Controller
 {
-   ArrayList<DataSet> dataSet;
+   // Data (model)
+   ArrayList<DataSet> dataSet = new ArrayList<>();
+   // User input (view)
+   Screen view = new Screen();
+   // Movement methods
+   Robot robot = new Robot();
 
-   public static void main(String[] args)
+   public static void main(String[] args) throws InterruptedException
    {
-      Controller con = new Controller();
-      con.run();
+      Controller controller = new Controller();
+      controller.run();
    }
-   
-   public void run()
+
+   public void run() throws InterruptedException
    {
+      // First loop - get input
       while(moreInput())
       {
-         int a, s, d;
-         // Should get user input here
-         // instead of hard-coding values
-         a = 95;
-         s = 75;
-         d = 100;
+         // Declare placeholder variables
+         int angle, speed, distance;
 
-         DataSet ds = new DataSet();
-         ds.SetAngle(a);
-         dataSet.add(ds);
-         
+         // Draw a new GUI
+         view.drawGUI();
+
+         // Get the speed from the user
+         view.askQuestion("Speed?");
+         speed = view.pickInt(0, 100);
+
+         // Get the angle from the user
+         view.askQuestion("Angle?");
+         angle = view.pickInt(-180, 180);
+
+         // Get the distance from the user
+         view.askQuestion("Distance?");
+         distance = view.pickInt(0, 100);
+
+         // Store data in a new DataSet
+         storeDataSet(angle, speed, distance);
       }
+
+      // Second loop - drive according to data
+      while(!view.confirm())
+      {
+         view.askQuestion("Enter when Ready");
+      }
+      move();
    }
-   
+
+   // Asks if user wants to continue
    public boolean moreInput()
    {
-      LCD.clear();
-      LCD.drawString("More Input?", 1,1);
-      int b = Button.waitForAnyPress();
-      if ( b == Button.ID_ENTER)
-      {
-         return true;
-      }
-      else
-      {
-         return false;
-      }
+      view.drawGUI();
+      view.askQuestion("More Input?");
+      return view.confirm();
    }
 
+   // 
+   public void storeDataSet(int angle, int speed, int distance)
+   {
+      DataSet newSet = new DataSet();
+      newSet.setAngle(angle);
+      newSet.setSpeed(speed);
+      newSet.setDistance(distance);
+      dataSet.add(newSet);
+   }
+
+   public void move() throws InterruptedException
+   {
+      // Drive according to data!
+      LCD.clearDisplay();
+      LCD.drawString("HEYO!!!", 1, 1);
+      Thread.sleep(50000);
+   }
 }

@@ -45,6 +45,7 @@ public class Calculator
       Screen.displayResult("" + result);
    }
 
+
    // Get a number from the user
    // calls with an "order" argument
    // just for cosmetic purpose
