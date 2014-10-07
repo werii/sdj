@@ -1,4 +1,3 @@
-import lejos.nxt.LCD;
 import lejos.nxt.MotorPort;
 
 public class Robot
@@ -31,6 +30,7 @@ public class Robot
    }
    
    // Turn the robot a given number of degrees
+   // NOT FINISHED - JUNK CODE :(
    public void rotate(int degrees)
    {
       // Stop motors

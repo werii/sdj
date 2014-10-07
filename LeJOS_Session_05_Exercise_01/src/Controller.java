@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import lejos.nxt.*;
-
 //  1. Prepare a series of datasets
 //  2. Each dataset contains three values (speed, distance, angle)
 //  3. Enter datasets until user is finished ("Route Finished")
