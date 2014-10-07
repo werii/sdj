@@ -46,6 +46,7 @@ public class Robot
       double target = 0;
 
       // Find out how many revolutions needed
+      // Do some complicated math to figure this out
 
       // Go for a half revolution (approximately 90 deg)
       while (revolutions < target)
