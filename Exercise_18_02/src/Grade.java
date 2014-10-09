@@ -1,6 +1,7 @@
 
 public class Grade
 {
+   // Class copied from Exercise 18.02A
    private String courseName;
    private int grade;
    
@@ -15,14 +16,14 @@ public class Grade
    
    public String getCourseName()
    {
-      // Not an error, but I like to use this.
+      // Not an error, but I like to use "this."
       // when referring to class variables
       return courseName;
    }
    
    public int getGrade()
    {
-      // Not an error, but I like to use this.
+      // Not an error, but I like to use "this."
       // when referring to class variables
       return grade;
    }
