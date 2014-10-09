@@ -4,10 +4,10 @@ public class Song
    // Declare class variables
    private String artist;
    private String title;
-   private int length;
+   private Duration length;
    
    // Constructor
-   public Song(String artist, String title, int length)
+   public Song(String artist, String title, Duration length)
    {
       this.artist = artist;
       this.title = title;
@@ -25,7 +25,7 @@ public class Song
       return this.title;
    }
 
-   public int getLength()
+   public Duration getLength()
    {
       return this.length;
    }
@@ -33,6 +33,6 @@ public class Song
    // Returns a string representation
    public String toString()
    {
-      return String.format("Song(%s, %s, %d)", this.artist, this.title, this.length);
+      return String.format("Song(%s, %s, %d)", this.artist, this.title, this.length.toString());
    }
 }
