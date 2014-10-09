@@ -40,11 +40,11 @@ public class MusicAlbum
       for (int i = 0; i < this.songs.length; i++)
       {
          // Add the length of the song at the current index to the total length
-         totalLength += this.songs[i].getLength();
-         
+         totalLength += this.songs[i].getLength().toSeconds();
       }
       
       // Return the total length
+      // NOT FINISHED: just returns seconds, not very useful :\
       return totalLength;
 
    }
