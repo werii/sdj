@@ -30,9 +30,16 @@ public class Robot
    }
    
    // Turn the robot a given number of degrees
-   // NOT FINISHED - JUNK CODE :(
    public void rotate(int degrees)
    {
+      // Magic number
+      // Found by taking the circumference of a full rotation,
+      // and figuring out how much the wheels need to turn to reach that
+      double tachosInFullRotation = 1286;
+      
+      // Find tachos needed to meet the number of degrees specified
+      double tachosNeeded = tachosInFullRotation * ((double) degrees / 360);
+
       // Stop motors
       MotorPort.A.controlMotor(100, 3);
       MotorPort.B.controlMotor(100, 3);
@@ -41,18 +48,12 @@ public class Robot
       MotorPort.A.resetTachoCount();
       MotorPort.B.resetTachoCount();
       
-      // Declare and set revolutions variable
-      double revolutions = 0;
-      double target = 0;
-
-      // Find out how many revolutions needed
-      // Do some complicated math to figure this out
-
-      // Go for a half revolution (approximately 90 deg)
-      while (revolutions < target)
+      // Go until distance traveled is equal to the distance needed
+      double distanceTraveled = 0;
+      while ( distanceTraveled < tachosNeeded )
       {
          MotorPort.A.controlMotor(100, 1);
-         revolutions = (MotorPort.A.getTachoCount() / 360);
+         distanceTraveled = MotorPort.A.getTachoCount();
       }
       
       // Now stop motors again

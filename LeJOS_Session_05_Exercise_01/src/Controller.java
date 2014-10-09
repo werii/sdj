@@ -84,6 +84,7 @@ public class Controller
          view.drawGUI();
          view.drawNumber(i+1);
          robot.forward(distance, speed);
+         robot.rotate(angle);
       }
    }
 }

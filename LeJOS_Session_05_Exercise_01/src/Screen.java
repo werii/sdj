@@ -39,8 +39,8 @@ public class Screen
       // Enter hasn't been pressed yet...
       boolean enterPressed = false;
       
-      // Start off at 0
-      int number = 0;
+      // Start off at 50
+      int number = 180;
 
       // Start the loop
       while(enterPressed == false)
