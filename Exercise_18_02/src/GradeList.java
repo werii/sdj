@@ -56,8 +56,15 @@ public class GradeList
    
    public String toString()
    {
-      // WARNING: Incorrect
-      String s = "Grade list: (average = ?)\n" + grades;
+      // Fixed
+      // Start with a basic String with the average
+      String s = "Grade list: (average = " + this.getAverage() + ")\n";
+      // Loop through the grades array
+      for (int i = 0; i < this.getSize(); i++)
+      {
+         // For each index, use the toString method in the current Grade object
+         s += this.getGrade(i).toString() + "\n";
+      }
       return s;
    }
 
