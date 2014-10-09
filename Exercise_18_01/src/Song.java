@@ -33,6 +33,6 @@ public class Song
    // Returns a string representation
    public String toString()
    {
-      return "Artist: " + this.artist + ", title: " + this.title + ", length: " + this.length;
+      return String.format("Song(%s, %s, %d)", this.artist, this.title, this.length);
    }
 }
