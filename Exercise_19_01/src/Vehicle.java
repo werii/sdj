@@ -32,7 +32,7 @@ public class Vehicle
    // Check for equality against another Vehicle object
    public boolean equals(Vehicle other)
    {
-      return this.licensePlate == other.licensePlate && this.weight == other.weight;
+      return this.licensePlate.equals(other.licensePlate) && this.weight == other.weight;
    }
 }
 
