@@ -83,8 +83,13 @@ public class Controller
          int angle = dataSet.get(i).getAngle();
          view.drawGUI();
          view.drawNumber(i+1);
-         robot.forward(distance, speed);
-         robot.rotate(angle);
+         int x = 0;
+         while (x < 50 )
+         {
+            robot.forward(distance, speed);
+            robot.rotate(angle);
+            x++;
+         }
       }
    }
 }

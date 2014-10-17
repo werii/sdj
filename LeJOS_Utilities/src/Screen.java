@@ -33,13 +33,13 @@ public class Screen
    }
 
    // Have user pick a number in a certain range
-   public int pickInt(int low, int high)
+   public int pickInt(int low, int high) throws InterruptedException
    {
       // Enter hasn't been pressed yet...
       boolean enterPressed = false;
 
-      // Start off between the low and high
-      int number = (high - low) / 50;
+      // Start off at zero
+      int number = 0;
 
       // Start the loop
       while(enterPressed == false)
@@ -56,33 +56,73 @@ public class Screen
             enterPressed = true;
          }
 
-         // If input is left, decrement number by 10
+         // If input is left, decrement
          if (b == Button.ID_LEFT)
          {
-            // Don't let number be less than lowest allowed
-            if (number <= low )
+            // Set an inital sleep time to 800ms
+            int sleepTime = 200;
+
+            // While the button is pressed or held down
+            while(Button.LEFT.isDown())
             {
-               continue;
+               drawNumber(number);
+               // Decrease the sleep time by 50ms
+               // But keep it above 100ms
+               if (sleepTime > 20)
+               {
+                  sleepTime -= 5;
+               }
+
+               // Don't let the number be less than the low limit
+               if (number <= low)
+               {
+                  continue;
+               }
+               else
+               {
+                  // Decrement by one
+                  number -= 1;
+               }
+               // Sleep 
+               Thread.sleep(sleepTime);
             }
-            number -= 10;
          }
 
-         // If input is right, increment number by 10
+         // If input is right, increment
          if (b == Button.ID_RIGHT)
          {
-            // Don't let number be more than highest allowed
-            if (number >= high)
+            // Set an inital sleep time to 800ms
+            int sleepTime = 200;
+
+            // While the button is pressed or held down
+            while(Button.RIGHT.isDown())
             {
-               continue;
+               drawNumber(number);
+               // Decrease the sleep time by 50ms
+               // But keep it above 100ms
+               if (sleepTime > 20)
+               {
+                  sleepTime -= 5;
+               }
+
+               // Don't let the number be more than the high limit
+               if (number >= high)
+               {
+                  continue;
+               }
+               else
+               {
+                  // Increment by one
+                  number += 1;
+               }
+               // Sleep 
+               Thread.sleep(sleepTime);
             }
-            number += 10;
          }
       }
-
       // After user has pressed enter, leave the loop
       // and return the chosen value
       return number;
-
    }
 
    // Ask for user confirmation

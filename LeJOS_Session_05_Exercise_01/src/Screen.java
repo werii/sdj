@@ -6,7 +6,7 @@ import lejos.nxt.LCD;
 public class Screen
 {
    // Utility methods for drawing to the screen
-   
+
    // Draw the GUI box
    public void drawGUI()
    {
@@ -16,7 +16,7 @@ public class Screen
       Graphics g = new Graphics();
       g.drawRect(0, 0, 99, 62);
    }
-   
+
    // Ask a question
    public void askQuestion(String q)
    {
@@ -34,13 +34,13 @@ public class Screen
    }
 
    // Have user pick a number in a certain range
-   public int pickInt(int low, int high)
+   public int pickInt(int low, int high) throws InterruptedException
    {
       // Enter hasn't been pressed yet...
       boolean enterPressed = false;
-      
-      // Start off at 50
-      int number = 180;
+
+      // Start off at high value
+      int number = high;
 
       // Start the loop
       while(enterPressed == false)
@@ -57,33 +57,73 @@ public class Screen
             enterPressed = true;
          }
 
-         // If input is left, decrement number by 10
+         // If input is left, decrement
          if (b == Button.ID_LEFT)
          {
-            // Don't let number be less than lowest allowed
-            if (number <= low )
+            // Set an inital sleep time to 200ms
+            int sleepTime = 200;
+
+            // While the button is pressed or held down
+            while(Button.LEFT.isDown())
             {
-               continue;
+               drawNumber(number);
+               // Decrease the sleep time by 5ms
+               // But keep it above 20ms
+               if (sleepTime > 20)
+               {
+                  sleepTime -= 5;
+               }
+
+               // Don't let the number be less than the low limit
+               if (number <= low)
+               {
+                  continue;
+               }
+               else
+               {
+                  // Decrement by one
+                  number -= 1;
+               }
+               // Sleep 
+               Thread.sleep(sleepTime);
             }
-            number -= 10;
          }
 
-         // If input is right, increment number by 10
+         // If input is right, increment
          if (b == Button.ID_RIGHT)
          {
-            // Don't let number be more than highest allowed
-            if (number >= high)
+            // Set an inital sleep time to 200ms
+            int sleepTime = 150;
+
+            // While the button is pressed or held down
+            while(Button.RIGHT.isDown())
             {
-               continue;
+               drawNumber(number);
+               // Decrease the sleep time by 5ms
+               // But keep it above 20ms
+               if (sleepTime > 20)
+               {
+                  sleepTime -= 5;
+               }
+
+               // Don't let the number be more than the high limit
+               if (number >= high)
+               {
+                  continue;
+               }
+               else
+               {
+                  // Increment by one
+                  number += 1;
+               }
+               // Sleep 
+               Thread.sleep(sleepTime);
             }
-            number += 10;
          }
       }
-
       // After user has pressed enter, leave the loop
       // and return the chosen value
       return number;
-      
    }
 
    // Ask for user confirmation
@@ -93,7 +133,7 @@ public class Screen
    {
       // Record user input
       int buttonPressed = Button.waitForAnyPress();
-      
+
       // If enter, return true
       if ( buttonPressed == Button.ID_ENTER )
       {
@@ -107,7 +147,7 @@ public class Screen
       // If neither enter nor escape, run method again (recursion)
       else 
       {
-        return confirm(); 
+         return confirm(); 
       }
    }
 }

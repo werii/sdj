@@ -50,12 +50,30 @@ public class Robot
       
       // Go until distance traveled is equal to the distance needed
       double distanceTraveled = 0;
-      while ( distanceTraveled < tachosNeeded )
-      {
-         MotorPort.A.controlMotor(100, 1);
-         distanceTraveled = MotorPort.A.getTachoCount();
-      }
       
+      // NOTE: following code should be refactored
+
+      // If degrees entered was positive
+      // Turn right
+      if (tachosNeeded >= 0)
+      {
+         while ( distanceTraveled < tachosNeeded )
+         {
+            MotorPort.A.controlMotor(100, 1);
+            distanceTraveled = MotorPort.A.getTachoCount();
+         }
+      }
+      // If degrees entered was negative
+      // Turn left
+      else
+      {
+         while ( distanceTraveled < -tachosNeeded )
+         {
+            MotorPort.B.controlMotor(100, 1);
+            distanceTraveled = MotorPort.B.getTachoCount();
+         }
+         
+      }
       // Now stop motors again
       MotorPort.A.controlMotor(100, 3);
       MotorPort.B.controlMotor(100, 3);
