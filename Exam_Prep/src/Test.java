@@ -8,9 +8,9 @@ public class Test
       Tenant alice = new Tenant("Alice");
       Apartment apt = new Apartment(300);
       
-      System.out.println(apt.isAvailabe());
+      System.out.println(apt.isAvailable());
       apt.rentTo(alice, date);
-      System.out.println(apt.isAvailabe());
+      System.out.println(apt.isAvailable());
 
    }
 }
